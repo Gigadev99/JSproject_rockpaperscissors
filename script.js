@@ -31,7 +31,6 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-
 function game() {
     let playerStatus = 0; let computerStatus = 0;
     for (let i = 1; i <= 5; i++) {
