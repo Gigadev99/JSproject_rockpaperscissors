@@ -1,7 +1,7 @@
 function getComputerChoice() {
     return ["Rock","Paper","Scissors"][Math.floor(Math.random() * 3)];
 }
-let buttonAdded = true;
+
 function playRound(playerSelection, computerSelection) {
     player.textContent = `You chose: ${playerSelection}`
     computer.textContent = `Computer chose: ${computerSelection}`
@@ -64,4 +64,3 @@ function game() {
         last.appendChild(restart);
     }
 }
-console.log(buttons)
