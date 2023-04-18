@@ -1,13 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .title {
+      padding-top: 30px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .buttons button {
+      width:200px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items:    center;
+    }
+    h1 {
+      margin:      0;
+      padding:     0;
+      font-family: monospace;
+      text-align:  center
+    }
+
+    h1.player , h1.computer , h1.score, .winner{
+      font-size: 30px;
+      font-weight:700;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .player {color: blue;}        .computer {color: red;}
+  
+    div.rock {
+      max-height: 85%
+    }
+    div.paper, div.scissors{
+      max-height: 80%;
+      margin-top: 5px;
+      min-width:  80%;
+    }
+
+    .scissors {
+      transform: scaleY(-1);
+    }
+
+    img {
+      max-width:  100%;
+      height:     100%;
+      object-fit: contain;
+    }
+    .choice {
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .player, .computer {
+      flex-grow:  1;
+      flex-basis: 50%
+    }
+    .score {
+      margin-top: 10px;
+      flex-grow: 1;
+    }
+    .last {
+      text-align: center;
+      font-family: monospace;
+    }
+    .playagain {
+      font-size: 30px;
+      font-weight:800;
+      font-family: inherit;
+      margin-top: 10px;
+    }
+    .winner {
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    
+  <h1  class = "title">rock paper scissors.</h1>
+  <div class = "buttons">
+    <button id = "rock">
+      <h1>ROCK</h1>
+      <div class= "img rock">
+        <img src= "rock.webp">
+      </div>
+    </button>
+    <button id = "paper">
+      <h1>PAPER</h1>
+      <div class = "img paper">
+        <img src = "paper.png">
+      </div>
+    </button>
+    <button id = "scissors">
+      <h1>SCISSORS</h1>
+      <div class = "img scissors">
+        <img src = "scissors.svg">
+      </div>
+    </button>
+  </div>
+  <div    class = "choice">
+    <h1   class = "player">You chose:</h1>
+    <h1   class = "computer">Computer chose:</h1>
+    <h1   class = "score">Score: </h1>
+  </div>
+  <div>
+    <h1   class = "winner"></h1>
+  </div>
+  <div class = "last">
+
+  </div>
 </body>
+<script src="script.js"></script>
 </html>
